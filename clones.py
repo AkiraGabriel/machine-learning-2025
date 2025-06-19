@@ -81,6 +81,9 @@ tree.plot_tree(model, max_depth=4,
                class_names=model.classes_,
                filled=True)
 # %%
-features =["Massa(em kilos)", "General Jedi encarregado", "Estatura(cm)"]
+features =["Massa(em kilos)", "Estatura(cm)"]
+
+# %%
+df['Status '] = df['Status '].replace({0:'Defeituoso', 1:'Apto'})
 # %%
 df.groupby('Status ')[features].mean()
