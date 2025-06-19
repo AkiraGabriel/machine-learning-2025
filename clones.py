@@ -83,4 +83,4 @@ tree.plot_tree(model, max_depth=4,
 # %%
 features =["Massa(em kilos)", "General Jedi encarregado", "Estatura(cm)"]
 # %%
-df.groupby['Status '][features].mean()
+df.groupby('Status ')[features].mean()
