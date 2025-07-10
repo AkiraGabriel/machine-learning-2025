@@ -105,4 +105,6 @@ plt.ylabel('Recall')
 
 plt.legend([f'Árvore: {auc_arvore:.2f}', f'Naive: {auc_naive:.2f}', f'Regression: {auc_reg:.2f}'])
 # %%
-auc_reg
+
+pd.Series({"model": reg, "features":features }).to_pickle("model_feliz.plk")
+# %%
