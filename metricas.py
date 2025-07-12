@@ -6,6 +6,8 @@ url = 'https://docs.google.com/spreadsheets/d/1YQBQ3bu1TCmgrRch1gzW5O4Jgc8huzUSr
 df = pd.read_csv(url)
 df.head()
 # %%
+df.columns
+# %%
 df = df.replace({"Sim":1, "Não":0})
 df.head()
 # %%
@@ -107,4 +109,6 @@ plt.legend([f'Árvore: {auc_arvore:.2f}', f'Naive: {auc_naive:.2f}', f'Regressio
 # %%
 
 pd.Series({"model": reg, "features":features }).to_pickle("model_feliz.plk")
+# %%
+df.columns
 # %%
